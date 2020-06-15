@@ -1,7 +1,9 @@
+import pygame
+
 from models.ItemGenerator import ItemGenerator
 
 
-class Factory(ItemGenerator):
+class Factory(ItemGenerator, pygame.sprite.Sprite):
     def __init__(self, production_speed, capacity):
         ItemGenerator.__init__(self, production_speed, capacity)
         self.raw_materials = 0
